@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Testing blockly</title>
+    <script src="blockly_compressed.js" charset="utf-8"></script>
+    <script src="blocks_compressed.js" charset="utf-8"></script>
+    <script src="javascript_compressed.js" charset="utf-8"></script>
+
+
+    <script src="msg/js/en.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
+    <button onclick="runCode(); return">Daje</button>
+  </body>
+  <script src="myBlocksInit.js" charset="utf-8"></script>
+
+  <script src="myBlocks.js" charset="utf-8"></script>
+  <script src="workspace.js" charset="utf-8"></script>
+  <script>
+  function runCode() {
+    Blockly.JavaScript.addReservedWords('code');
+    var code = Blockly.JavaScript.workspaceToCode(workspace);
+    try {
+      console.log(code);
+    } catch (e) {
+      alert(e);
+    }
+  }
+  </script>
+</html>
