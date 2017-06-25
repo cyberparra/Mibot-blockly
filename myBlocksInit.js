@@ -1,29 +1,4 @@
-Blockly.Blocks['startrobot'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField("Start Robot");
-    this.appendStatementInput("NAME")
-        .setCheck("String")
-        .appendField("Blocco");
-    this.setColour(0);
-    this.setTooltip('');
-    this.setHelpUrl('');
-  }
-};
-
-Blockly.Blocks['myblock'] = {
-  init: function() {
-    this.appendValueInput("NAME")
-        .setCheck("String")
-        .appendField("myBlock");
-    this.setInputsInline(false);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(230);
-    this.setTooltip('Test');
-    this.setHelpUrl('');
-  }
-};
+// Define you custom blocks
 
 Blockly.Blocks['wait'] = {
   init: function() {
@@ -34,7 +9,7 @@ Blockly.Blocks['wait'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(230);
-    this.setTooltip('Test');
+    this.setTooltip('Wait specified ammout of seconds');
     this.setHelpUrl('');
   }
 };

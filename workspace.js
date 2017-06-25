@@ -19,13 +19,19 @@ function reqListener () {
 		sounds : true,
 		oneBasedIndex : true,
 		zoom: {
-    controls: true,
-    wheel: true,
-    startScale: 1.0,
-    maxScale: 4,
-    minScale: 0.25,
-    scaleSpeed: 1.1
-  	}
+	    controls: true,
+	    wheel: true,
+	    startScale: 1.0,
+	    maxScale: 4,
+	    minScale: 0.25,
+	    scaleSpeed: 1.1
+  	},
+		grid:
+         {
+					spacing: 20,
+          length: 2,
+          colour: '#ddd',
+          snap: true}
 	};
 	workspace = Blockly.inject("blocklyDiv", options);
 }
