@@ -46,30 +46,30 @@ Blockly.JavaScript['pendown'] = function(block) {
 
 Blockly.JavaScript['forward'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
-  var code = 'sendCommand(FORWARD);\n';
+  var code = 'sendCommand('+FORWARD+');\n';
   return code;
 };
 
 Blockly.JavaScript['backward'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
-  var code = 'sendCommand(BACKWARD);\n';
+  var code = 'sendCommand('+BACKWARD+');\n';
   return code;
 };
 
 Blockly.JavaScript['left'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
-  var code = 'sendCommand(LEFT);\n';
+  var code = 'sendCommand('+LEFT+');\n';
   return code;
 };
 
 Blockly.JavaScript['right'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
-  var code = 'sendCommand(RIGHT);\n';
+  var code = 'sendCommand('+RIGHT+');\n';
   return code;
 };
 
 Blockly.JavaScript['stop'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
-  var code = 'sendCommand(STOP);\n';
+  var code = 'sendCommand('+STOP+');\n';
   return code;
 };

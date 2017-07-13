@@ -9,6 +9,10 @@ function wait(ms) {
   waitStep = ms;
 }
 
+function sendCommand(command) {
+  console.log("serial " + command);
+}
+
 /*
   Define your API for the Interpreter
   https://developers.google.com/blockly/guides/app-integration/running-javascript#js_interpreter
@@ -21,6 +25,14 @@ function initApi(interpreter, scope) {
     return interpreter.createPrimitive(highlightBlock(id));
   };
   interpreter.setProperty(scope, 'highlightBlock',
+      interpreter.createNativeFunction(wrapper));
+
+  // Add an API function for "sendCommand" blocks.
+  var wrapper = function(id) {
+    id = id ? id.toString() : '';
+    return interpreter.createPrimitive(sendCommand(id));
+  };
+  interpreter.setProperty(scope, 'sendCommand',
       interpreter.createNativeFunction(wrapper));
 
   // Add an API function for "wait" blocks.
