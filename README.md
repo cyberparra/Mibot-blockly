@@ -1,6 +1,6 @@
-# blockly-boilerplate
+# blockly-boilerplate Mibot
 
-A starting point for nodejs and blockly.
+nodejs and blockly for coding Mibot rover based on microbit
 
 Clone this repository:
 
