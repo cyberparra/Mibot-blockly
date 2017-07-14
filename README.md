@@ -27,12 +27,12 @@ Finally, the Mibot acts on their motors depending on the command received.
 
 _Plese note:_
 
-Both on rover and on robot must be run specific programs that manages radio trasmissions and the motors actions
+Both on Radio Controller and on Mibot robot must be run specific programs that manages radio trasmissions and the motors actions
 
 Clone this repository:
 
 ```
-git clone https://github.com/darkwave/blockly-boilerplate
+git clone https://github.com//cyberparra/Mibot-blockly
 ```
 
 Install dependencies and download updated version of [blockly](https://github.com/google/blockly) javascript files:
