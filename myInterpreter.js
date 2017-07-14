@@ -1,6 +1,8 @@
 var myInterpreter;
 var waitStep = 0;
 
+const separator = '$';
+
 function highlightBlock(id) {
   workspace.highlightBlock(id);
 }
@@ -10,7 +12,15 @@ function wait(ms) {
 }
 
 function sendCommand(command) {
-  console.log("serial " + command);
+  //add separator to command
+  command += separator;
+
+  if (microbit != null) {
+    console.log("Sent " + command + " to micro:bit");
+    microbit.write(command+"\n");
+  } else {
+      console.log("No micro:bit available");
+    }
 }
 
 /*

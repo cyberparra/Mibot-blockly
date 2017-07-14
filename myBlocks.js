@@ -2,7 +2,7 @@ const FORWARD = 2;
 const BACKWARD = 3;
 const RIGHT = 1;
 const LEFT = 0;
-const STOP = 6
+const STOP = 5;
 
 Blockly.JavaScript['wait'] = function(block) {
   var seconds = Blockly.JavaScript.valueToCode(block, 'SECONDS', Blockly.JavaScript.ORDER_ATOMIC);

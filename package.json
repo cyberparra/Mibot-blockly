@@ -2,10 +2,20 @@
   "name": "mibot-blockly",
   "version": "0.0.3",
   "description": "Nodejs and blockly for coding Mibot rover based on micro:bit",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "node update_blockly.js"
+    "install": "electron-rebuild && node update_blockly.js"
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "latest",
+    "electron-rebuild": "^1.5.11"
+  },
+  "dependencies": {
+    "electron-debug": "^1.2.0",
+    "serialport": "^5.0.0-beta7"
   },
   "repository": "https://github.com/cyberparra/Mibot-blockly",
   "author": "Team Codemotion Kids <kids@codemotion.it> (https://github.com/cyberparra/Mibot-blockly)",
