@@ -5,7 +5,7 @@ Blockly.Blocks['motor_on'] = {
         .appendField("motor")
         .appendField(new Blockly.FieldDropdown([["Left","L"], ["Right","R"]]), "motor")
         .appendField("direction")
-        .appendField(new Blockly.FieldDropdown([["Left","L"], ["Right","R"], ["Forward","F"], ["Back","B"]]), "direction");
+        .appendField(new Blockly.FieldDropdown([["Forward","F"], ["Back","B"]]), "direction");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(230);
