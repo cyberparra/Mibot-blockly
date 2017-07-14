@@ -1,6 +1,10 @@
-# blockly-boilerplate Mibot
+# Mibot blockly
 
-nodejs and blockly for coding Mibot rover based on microbit
+INTRODUCTION
+this project aim to develop a simplified visual programming language devoted to Mibot, a DIY robot based on micro:bit
+The scope is to create semplified blocks for controlling the robot movement; avoiding to manage the control of single pins to start and stop the motors
+
+The coding environment is based on Nodejs and blockly 
 
 Clone this repository:
 
