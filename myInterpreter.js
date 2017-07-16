@@ -16,8 +16,13 @@ function sendCommand(command) {
   command += separator;
 
   if (microbit != null) {
-    console.log("Sent " + command + " to micro:bit");
-    microbit.write(command+"\n");
+
+    microbit.write(command+"\n", function(err) {
+      if (err) 
+        return console.log('Error on write: ', err.message);
+      else
+      console.log("-->" + command);
+    });
   } else {
       console.log("No micro:bit available");
     }
