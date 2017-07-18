@@ -3,6 +3,10 @@ const BACKWARD = 3;
 const RIGHT = 1;
 const LEFT = 0;
 const STOP = 5;
+const MIBOTON = 6;
+const MIBOTOFF = 7;
+const SPINL = 8;
+const SPINR = 9;
 
 Blockly.JavaScript['wait'] = function(block) {
   var seconds = Blockly.JavaScript.valueToCode(block, 'SECONDS', Blockly.JavaScript.ORDER_ATOMIC);
@@ -28,7 +32,12 @@ Blockly.JavaScript['motor_off'] = function(block) {
 Blockly.JavaScript['spin'] = function(block) {
   var dropdown_direction = block.getFieldValue('direction');
   // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+  var code;
+  if (dropdown_direction == 'L')
+    code = 'sendCommand('+SPINL+');\n';
+    else {
+      code = 'sendCommand('+SPINR+');\n';
+    }
   return code;
 };
 
