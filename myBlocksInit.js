@@ -4,8 +4,8 @@ Blockly.Blocks['motor_on'] = {
         .appendField("Motor ON")
         .appendField("motor")
         .appendField(new Blockly.FieldDropdown([["Left","L"], ["Right","R"]]), "motor")
-        .appendField("direction")
-    this.setNextStatement(true, null);
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
     this.setColour(230);
     this.setTooltip('turn motor ON');
     this.setHelpUrl('');
