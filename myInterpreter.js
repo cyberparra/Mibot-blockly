@@ -1,7 +1,7 @@
 var myInterpreter;
 var waitStep = 0;
 
-const separator = '$';
+//const separator = '$';
 
 function highlightBlock(id) {
   workspace.highlightBlock(id);
@@ -13,12 +13,12 @@ function wait(ms) {
 
 function sendCommand(command) {
   //add separator to command
-  command += separator;
+  //command += separator;
 
   if (microbit != null) {
 
     microbit.write(command+"\n", function(err) {
-      if (err) 
+      if (err)
         return console.log('Error on write: ', err.message);
       else
       console.log("-->" + command);
