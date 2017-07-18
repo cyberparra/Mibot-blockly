@@ -7,6 +7,12 @@ const MIBOTON = 6;
 const MIBOTOFF = 7;
 const SPINL = 8;
 const SPINR = 9;
+const MOFFL = 10;
+const MOFFR =11;
+const MONL = 12;
+const MONR = 13;
+
+
 
 Blockly.JavaScript['wait'] = function(block) {
   var seconds = Blockly.JavaScript.valueToCode(block, 'SECONDS', Blockly.JavaScript.ORDER_ATOMIC);
@@ -18,14 +24,25 @@ Blockly.JavaScript['motor_on'] = function(block) {
   var dropdown_motor = block.getFieldValue('motor');
   var dropdown_direction = block.getFieldValue('direction');
   // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+  var code
+  if (dropdown_direction == 'L')
+    code = 'sendCommand('+MONL+');\n';
+  else if (dropdown_direction == 'R'
+      code = 'sendCommand('+MONR+');\n';
+    }
+
   return code;
 };
 
 Blockly.JavaScript['motor_off'] = function(block) {
   var dropdown_motor = block.getFieldValue('motor');
   // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+  var code
+  if (dropdown_direction == 'L')
+    code = 'sendCommand('+MOFFL+');\n';
+  else if (dropdown_direction == 'R'
+      code = 'sendCommand('+MOFFR+');\n';
+    }
   return code;
 };
 
