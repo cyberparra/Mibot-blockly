@@ -9,8 +9,10 @@ const SPINL = 8;
 const SPINR = 9;
 const MOFFL = 10;
 const MOFFR =11;
-const MONL = 12;
-const MONR = 13;
+const MONLF = 12;
+const MONRF = 13;
+const MONLB = 14;
+const MONRB = 15;
 
 
 
@@ -22,25 +24,39 @@ Blockly.JavaScript['wait'] = function(block) {
 
 Blockly.JavaScript['motor_on'] = function(block) {
   var dropdown_motor = block.getFieldValue('motor');
-  var dropdown_direction = block.getFieldValue('direction');
+   var dropdown_direction = block.getFieldValue('direction');
   // TODO: Assemble JavaScript into code variable.
-  var code
-  if (dropdown_direction == 'L')
-    code = 'sendCommand('+MONL+');\n';
-  else if (dropdown_direction == 'R'
-      code = 'sendCommand('+MONR+');\n';
+  var code;
+  if (dropdown_motor == 'L') {
+    if (dropdown_direction == 'F') {
+        code = 'sendCommand('+MONLF+');\n';
     }
+    else {
+      code = 'sendCommand('+MONLB+');\n';
+    }
+  }
+  else if (dropdown_motor == 'R') {
+    if (dropdown_direction == 'F') {
+        code = 'sendCommand('+MONRF+');\n';
+    }
+    else {
+      code = 'sendCommand('+MONRB+');\n';
+    }
+    };
 
   return code;
 };
 
 Blockly.JavaScript['motor_off'] = function(block) {
   var dropdown_motor = block.getFieldValue('motor');
+//  var dropdown_direction = block.getFieldValue('direction');
   // TODO: Assemble JavaScript into code variable.
-  var code
-  if (dropdown_direction == 'L')
+  var code;
+
+  if (dropdown_motor == 'L') {
     code = 'sendCommand('+MOFFL+');\n';
-  else if (dropdown_direction == 'R'
+    }
+  else if (dropdown_motor == 'R'){
       code = 'sendCommand('+MOFFR+');\n';
     }
   return code;

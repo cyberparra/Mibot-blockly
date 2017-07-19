@@ -3,9 +3,9 @@
     <block type="wait"></block>
     <block type="motor_on">
       <field name="motor">L</field>
-      <field name="direction">L</field>
-    </block>
-    <block type="motor_off">
+      <field name="direction">F</field>
+        </block>
+      <block type="motor_off">
       <field name="motor">L</field>
     </block>
     <block type="spin">
